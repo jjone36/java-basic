@@ -1,5 +1,8 @@
 # 스터디용 개인 Repo
 
+## ([추후 자료 추가 예정](https://oss.navercorp.com/jiwon-j/hmjw-study))
+
+
 ## Java 온라인 스터디
 - 내용 : [백기선 개발자님](https://github.com/whiteship)과 함께하는 [온라인 자바 스터디](https://github.com/whiteship/live-study)
 - 날짜 : 2020.11.15 ~ 
