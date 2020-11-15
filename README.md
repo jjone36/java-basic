@@ -1,6 +1,6 @@
 # 스터디용 개인 Repo
 
-## ([추후 자료 추가 예정](https://oss.navercorp.com/jiwon-j/hmjw-study))
+#### ([추후 자료 추가 예정](https://oss.navercorp.com/jiwon-j/hmjw-study))
 
 
 ## Java 온라인 스터디
