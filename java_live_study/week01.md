@@ -77,4 +77,3 @@
 - [스프링 입문을 위한 자바 객체 지향의 원리와 이해]()
 - [바이트코드 위키](https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C)
 - [JDK 위키](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EA%B0%9C%EB%B0%9C_%ED%82%A4%ED%8A%B8)
-- [JRE] 
