@@ -1,4 +1,4 @@
-# 주차. [연산자](https://github.com/whiteship/live-study/issues/)
+# 3주차. [연산자](https://github.com/whiteship/live-study/issues/)
 - 날짜 : 2020.11.28
 - 목표 : 자바가 제공하는 다양한 연산자를 학습하기
 
