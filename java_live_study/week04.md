@@ -153,6 +153,8 @@
         }
         ```
 
+<br>
+
 ## live-study 대시 보드를 만드는 코드 구현 (과제1)
 ```diff
 - 깃헙 이슈 1번부터 18번까지 댓글을 순회하며 댓글을 남긴 사용자를 체크 할 것
@@ -161,6 +163,7 @@
 ```
 - [링크](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java)
 
+<br>
 
 ## 컬렉션 프레임 워크
 ### 컬렉션 프레임 워크란?
@@ -185,12 +188,12 @@
     - 단일 연결 리스트(Singly Linked List) : 다음(next) 요소를 가르키는 참조만을 가질 경우     
    
     <img src="http://www.tcpschool.com/lectures/img_java_singly_linked_list.png" width=60%>
-        - [이미지출처 - TCP school](http://www.tcpschool.com/java/java_collectionFramework_list)
+    - [이미지출처](http://www.tcpschool.com/java/java_collectionFramework_list)
 
     - 이중 연결 리스트(Doubly Linked List) : 이전(previous)와 다음(next) 요소를 가르키는 참조 둘 다 가질 경우 
    
     <img src="http://www.tcpschool.com/lectures/img_java_doubly_linked_list.png" width=60%>
-        - [이미지출처 - TCP school](http://www.tcpschool.com/java/java_collectionFramework_list)
+    - [이미지출처](http://www.tcpschool.com/java/java_collectionFramework_list)
 
 - 코드로 구현 
     ```java
