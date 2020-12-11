@@ -159,7 +159,7 @@
 - 참여율을 계산하세요. 총 18회에 중에 몇 %를 참여했는지 소숫점 두자리가지 보여줄 것
 - 깃헙 API를 익명으로 호출하는데 제한이 있기 때문에 본인의 깃헙 프로젝트에 이슈를 만들고 테스트를 하시면 더 자주 테스트할 수 있습니다.
 ```
-- 
+- [링크](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java)
 
 
 ## 컬렉션 프레임 워크
@@ -401,7 +401,6 @@
 
 <br>
 <hr>
-<br>
 
 ### 참고 자료 
 - [자바의 정석](http://www.yes24.com/Product/Goods/24259565)
