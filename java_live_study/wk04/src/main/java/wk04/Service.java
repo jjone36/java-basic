@@ -33,7 +33,6 @@ public class Service {
             List<GHIssue> issueList = getAllIssues();
             for (int i = 18; i > 0; i--) {
                 updateCommenters(issueList.get(i));
-                // System.out.println("======" + i + ": " + percentage.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();

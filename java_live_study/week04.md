@@ -347,11 +347,11 @@
 
         public void push(int data) {
             ListNode newNode = new ListNode(data);
-            ListNode.add(this.node, newNode, 1)
+            ListNode.add(node, newNode, 1)
         }
 
         public int pop() {
-            ListNode nodeToRemove = ListNode.remove(this.head, 1);
+            ListNode nodeToRemove = ListNode.remove(head, 1);
             return nodeToRemvoe.getValue();
         }
     }
@@ -372,8 +372,39 @@
 - 코드로 구현 
     ```java
     // 배열을 사용해서
-    public class Queue {
+    public class ArrayQueue {
+        private int[] arr;
+        private int last;
 
+        public ArrayQueue() {
+            this.arr = new int[0];
+            this.last = -1;
+        }
+
+        public void add(int data) {
+            if (arr.length == last) {
+                int[] tmp = new int[arr.length + 1];
+                for (int i = 0; i < arr.length; i++) {
+                    tmp[i] = arr[i];
+                }
+                tmp[last] = data;
+                arr = tmp;
+            } else {
+                arr[last] = data;
+            }
+        }
+
+        public int remove() {
+            if (arr.length == 0) {
+                throw new Exception("Queue is Empty");
+            }
+            int removeElm = arr[0];
+            for (int i = 1; i < last; i++) {
+                arr[i-1] = arr[i];
+            }
+            last -= 1;
+            return removeElm;
+        }
     }
     ```
     ```java
@@ -389,15 +420,15 @@
 
         public void add(int data) {
             ListNode newNode = new ListNode(data);
-            ListNode.add(this.head, newNode, this.last);
+            ListNode.add(head, newNode, last);
         }
 
         public int remove() throws Exception {
-            if (this.last != 0) {
-                this.last--
-                return ListNode.remove(this.head, 1).getValue();
+            if (last != 0) {
+                last--
+                return ListNode.remove(head, 1).getValue();
             } 
-            return new Exception("Queue is Empty");
+            throw new Exception("Queue is Empty");
         }
     }
     ```
