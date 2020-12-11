@@ -1,8 +1,14 @@
 package wk04;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.kohsuke.github.*;
 
@@ -10,7 +16,7 @@ public class Service {
 
     private GitHub github;
     private GHRepository githubRepo;
-    private Map<String, Integer> percentage;
+    private Map<String, Double> percentage = new HashMap<>();
 
     public Service(String oAuthToken, String repo) {
         GitHubBuilder builder = new GitHubBuilder();
@@ -25,13 +31,22 @@ public class Service {
     public void main() {
         try {
             List<GHIssue> issueList = getAllIssues();
-            for (GHIssue issue: issueList) {
-                updateCommenters(issue);
+            for (int i = 18; i > 0; i--) {
+                updateCommenters(issueList.get(i));
+                // System.out.println("======" + i + ": " + percentage.toString());
             }
-            System.out.println();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        System.out.println("======= Participants =======");
+        Object[] participants = percentage.keySet().toArray();
+        for (Object participant: participants) {
+            String account = participant.toString();
+            Double completancy = percentage.get(account);
+            System.out.println("> " + account + ": " + String.format("%.2f", completancy*100.0) + "%");
+        }
+        System.out.println("======= THE END =======");
     }
 
     private void updateCommenters(GHIssue issue) throws IOException {
@@ -45,7 +60,7 @@ public class Service {
     }
 
     private void updateCounts(String id) {
-        int num = 1;
+        double num = 1/18f;
         if (percentage.containsKey(id)) {
             num += percentage.get(id);
         }
