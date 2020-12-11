@@ -51,10 +51,8 @@ public class Service {
     private void updateCommenters(GHIssue issue) throws IOException {
         List<GHIssueComment> comments = issue.getComments();
         for (GHIssueComment comment: comments) {
-            if (hasAssignmentLink(comment)) {
-                String id = comment.getUser().getLogin();
-                updateCounts(id);
-            }
+            String id = comment.getUser().getLogin();
+            updateCounts(id);
         }
     }
 
