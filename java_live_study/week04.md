@@ -194,7 +194,7 @@
     <img src="http://www.tcpschool.com/lectures/img_java_doubly_linked_list.png" width=60%>
     - [이미지출처](http://www.tcpschool.com/java/java_collectionFramework_list)
 
-- [코드로 구현](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ListNode.java)
+- [코드로 구현](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/ListNode.java)
 
 ### (과제3) Stack 구현
 ```diff
@@ -208,7 +208,7 @@
         <img src="https://media.vlpt.us/images/sbinha/post/17a3cf61-fb95-4970-b66c-92a71b99846b/Screenshot%202020-04-20%2019.07.55.png" width=50%>
 
     - [이미지출처](https://velog.io/@sbinha/%EC%8A%A4%ED%83%9D-%ED%81%90)
-- [코드로 구현](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/Stack.java)
+- [코드로 구현](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/Stack.java)
 
 ### (과제4) ListNode를 사용해서 ListNodeStack 구현 
 ```diff
@@ -216,7 +216,7 @@
 - void push(int data)를 구현하세요.
 - int pop()을 구현하세요.
 ```
-- [코드로 구현](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ListNodeStack.java)
+- [코드로 구현](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/ListNodeStack.java)
 
 ### (과제5) Queue 구현 
 ```diff
@@ -230,7 +230,8 @@
         
     - [이미지출처](https://velog.io/@sbinha/%EC%8A%A4%ED%83%9D-%ED%81%90)
 
-- 코드로 구현 : [배열 사용](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ArrayQueue.java), [ListNode 사용](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ListNodeQueue.java)
+- 코드로 구현 : [배열 사용](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/ArrayQueue.java), 
+[ListNode 사용](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/ListNodeQueue.java)
 
 <br>
 <hr>
