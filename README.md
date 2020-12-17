@@ -12,9 +12,9 @@
     
     - 1주차 : [JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가](https://github.com/jjone36/self-study/blob/main/java_live_study/week01.md)
     - 2주차 : [자바 데이터 타입, 변수 그리고 배열](https://github.com/jjone36/self-study/blob/main/java_live_study/week02.md)
-    - 3주차 : 연산자
-    - 4주차 : 제어문
-    - 5주차 : 
+    - 3주차 : [연산자](https://github.com/jjone36/self-study/blob/main/java_live_study/week03.md)
+    - 4주차 : [제어문](https://github.com/jjone36/self-study/blob/main/java_live_study/week04.md), 자료구조 (LinkedList, Stack, Queue)
+    - 5주차 : [클래스](https://github.com/jjone36/self-study/blob/main/java_live_study/week05.md) / 자료구조(이진트리, DFS, BFS)
     - 6주차 : 
     - 7주차 : 
     - 8주차 : 

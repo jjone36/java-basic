@@ -1,4 +1,4 @@
-package wk04;
+package dashboard;
 
 public class ServiceTest {
 

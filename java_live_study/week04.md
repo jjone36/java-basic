@@ -75,7 +75,6 @@
 
 <br>
 <hr>
-<br>
 
 ## JUnit 5란?
 - 작성한 코드에 대하여 의도한 대로 구현되는지를 검증할 수 있는 단위 테스트를 제공하는 자바 프레임워크
@@ -161,7 +160,7 @@
 - 참여율을 계산하세요. 총 18회에 중에 몇 %를 참여했는지 소숫점 두자리가지 보여줄 것
 - 깃헙 API를 익명으로 호출하는데 제한이 있기 때문에 본인의 깃헙 프로젝트에 이슈를 만들고 테스트를 하시면 더 자주 테스트할 수 있습니다.
 ```
-- [링크](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java)
+- [링크](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/dashboard)
 
 <br>
 
@@ -195,91 +194,7 @@
     <img src="http://www.tcpschool.com/lectures/img_java_doubly_linked_list.png" width=60%>
     - [이미지출처](http://www.tcpschool.com/java/java_collectionFramework_list)
 
-- 코드로 구현 
-    ```java
-    public class ListNode {
-
-        private int value;
-        private ListNode nextNode;
-
-        public ListNode() {}
-
-        public ListNode(int value) {
-            this.value = value;
-            this.nextNode = null;
-        }
-
-        public int getValue() {
-            return this.value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
-        public ListNode getNextNode() {
-            return this.nextNode;
-        }
-
-        public void setNextNode(ListNode node) {
-            this.nextNode = node;
-        }
-
-        public ListNode add(ListNode head, ListNode nodeToAdd, int position) {
-
-            ListNode before = null;
-            ListNode current = head;   // 1.첫번째 노드에서
-
-            // 2.새로운 노드를 붙일 이전 노드의 위치를 찾음 
-            for (int i=0; i < position-1; i++) {
-                before = current;
-                current = current.getNextNode();
-            }
-
-            before.setNextNode(nodeToAdd);     // 4. 마지막 노드의 다음 위치를 새로운 노드로 연결 
-            nodeToAdd.setNextNode(current);     // 3. 마지막 노드의 위치를 삽입하는 새로운 노드의 위치 값으로 복사
-            return nodeToAdd;
-        }
-
-        public ListNode remove(ListNode head, int positionToRemove) {   
-            
-            ListNode before = null;
-            ListNode current = head;
-
-            // 1. 제일 앞단의 노드를 삭제하는 경우
-            if (positionToRemove == 0) {
-                ListNode nodeToRemove = current;
-                head = nodeToRemove.getNextNode()    // 1-1. 다음 노드를 head로 
-                nodeToRemove.next = null;    // 1-2. 지울 노드의 링크를 제거
-                return nodeToRemove;
-            }
-
-            // 2. 그 외의 경우 
-            // 2-1. 지울 노드가 있는 위치까지 접근함
-            for (int i = 0; i < positionToRemove - 1; i++) {
-                before = current;
-                current = current.getNextNode();      
-            }
-            ListNode nodeToRemove = current.getNextNode();
-
-            ListNode next = nodeToRemove.getNextNode();
-            before.setNextNode(next)              // 2-2. 지울 노드의 다음 노드를 이전 노드의 위치 값으로 복사
-            nodeToRemove.setNextNode(null)        // 2-2. 지울 노드의 링크를 제거
-            return nodeToRemove;
-        }
-
-        public boolean contains(ListNode head, ListNode nodeTocheck) {
-            ListNode current = head;
-            while (current.getNextNode() != null) {
-                if (current.getNextNode() == nodeToCheck) {
-                    return true;
-                }
-                current = current.getNextNode()
-            }
-            return false;
-        }
-    }
-    ```
+- [코드로 구현](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ListNode.java)
 
 ### (과제3) Stack 구현
 ```diff
@@ -293,41 +208,7 @@
         <img src="https://media.vlpt.us/images/sbinha/post/17a3cf61-fb95-4970-b66c-92a71b99846b/Screenshot%202020-04-20%2019.07.55.png" width=50%>
 
     - [이미지출처](https://velog.io/@sbinha/%EC%8A%A4%ED%83%9D-%ED%81%90)
-
-- 코드로 구현 
-    ```java
-    public class Stack {
-
-        private int[] arr;
-        private int top;
-
-        public Stack() {
-            arr = new int[0]
-            top = -1;           // 초기 index값
-        }
-
-        public void push(int data) {
-            if (arr.length == this.top) {
-                int[] tmp = new int[arr.length + 1];
-                for (int idx = 0; idx < arr.length; idx++) {
-                    tmp[idx] = arr[idx]
-                }
-                tmp[top+1] = data;
-                this.arr = tmp;
-            } 
-            arr[++top] = data;
-        }
-
-        public int pop() throws Exception {
-            if (top >= 0) {
-                return arr[top--];
-            } else {
-                throw new Exception("Stack Is Empty");
-            }
-        }
-    }
-    ```
-
+- [코드로 구현](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/Stack.java)
 
 ### (과제4) ListNode를 사용해서 ListNodeStack 구현 
 ```diff
@@ -335,27 +216,7 @@
 - void push(int data)를 구현하세요.
 - int pop()을 구현하세요.
 ```
-- 코드로 구현 
-    ```java
-    public class ListNodeStack {
-        
-        private ListNode head;
-
-        public ListNodeStack() {
-            this.head = new ListNode();
-        }
-
-        public void push(int data) {
-            ListNode newNode = new ListNode(data);
-            ListNode.add(node, newNode, 1)
-        }
-
-        public int pop() {
-            ListNode nodeToRemove = ListNode.remove(head, 1);
-            return nodeToRemvoe.getValue();
-        }
-    }
-    ```
+- [코드로 구현](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ListNodeStack.java)
 
 ### (과제5) Queue 구현 
 ```diff
@@ -369,69 +230,7 @@
         
     - [이미지출처](https://velog.io/@sbinha/%EC%8A%A4%ED%83%9D-%ED%81%90)
 
-- 코드로 구현 
-    ```java
-    // 배열을 사용해서
-    public class ArrayQueue {
-        private int[] arr;
-        private int last;
-
-        public ArrayQueue() {
-            this.arr = new int[0];
-            this.last = -1;
-        }
-
-        public void add(int data) {
-            if (arr.length == last) {
-                int[] tmp = new int[arr.length + 1];
-                for (int i = 0; i < arr.length; i++) {
-                    tmp[i] = arr[i];
-                }
-                tmp[last] = data;
-                arr = tmp;
-            } else {
-                arr[last] = data;
-            }
-        }
-
-        public int remove() {
-            if (arr.length == 0) {
-                throw new Exception("Queue is Empty");
-            }
-            int removeElm = arr[0];
-            for (int i = 1; i < last; i++) {
-                arr[i-1] = arr[i];
-            }
-            last -= 1;
-            return removeElm;
-        }
-    }
-    ```
-    ```java
-    // ListNode를 사용
-    public class ListNodeQueue {
-        private ListNode head;
-        private int last;
-
-        public ListNodeQueue() {
-            this.head = new ListNode();
-            this.last = 0;
-        }
-
-        public void add(int data) {
-            ListNode newNode = new ListNode(data);
-            ListNode.add(head, newNode, last);
-        }
-
-        public int remove() throws Exception {
-            if (last != 0) {
-                last--
-                return ListNode.remove(head, 1).getValue();
-            } 
-            throw new Exception("Queue is Empty");
-        }
-    }
-    ```
+- 코드로 구현 : [배열 사용](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ArrayQueue.java), [ListNode 사용](https://github.com/jjone36/self-study/tree/main/java_live_study/wk04/src/main/java/datastructure/ListNodeQueue.java)
 
 <br>
 <hr>

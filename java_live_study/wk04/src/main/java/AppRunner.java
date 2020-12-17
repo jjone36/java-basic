@@ -1,4 +1,4 @@
-import wk04.Service;
+import dashboard.Service;
 
 public class AppRunner {
 
