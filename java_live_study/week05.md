@@ -32,11 +32,11 @@
         }
         ```
     - 외부 클래스가 해당 클래스에 접근할 수 있는 범위는 **접근 지정자**를 통해 지정하여 캡슐화가 가능함
-        - public : 접근 제한 없음
-        - protected : 같은 패키지 내에서, 그리고 다른 패키지의 자손 클래스에서 접근 가능
-        - default : 같은 패키지 내에서만 접근 가능
-        - private : 같은 클래스 내에서만 접근 가능
-        > 접근 범위는 public > protected > default > private 순임
+        - `public` : 접근 제한 없음
+        - `protected` : 같은 패키지 내에서, 그리고 다른 패키지의 자손 클래스에서 접근 가능
+        - `default` : 같은 패키지 내에서만 접근 가능
+        - `private` : 같은 클래스 내에서만 접근 가능
+        > 접근 범위는 `public` > `protected` > `default` > `private` 순임
 
 <br>
 
@@ -141,6 +141,9 @@
             }
         }
         ```
+        - 지역 변수와 속성(객체 변수, 정적 변수)의 이름이 같은 경우 지역 변수를 우선함 
+        - 객체 변수와 이름이 같은 지역 변수가 있는 경우 객체 변수를 사용하려면 `this` 키워드로 구분함 (예: `this.name`)
+        - 정적 변수와 이름이 같은 지역 변수가 있는 경우 정적 변수를 사용하려면 클래스명을 접두사로 구분함 (예: `Foo.name`)
     2. 인자로 자기자신을 넘겨줄 때
         ```java
         public class Foo
@@ -173,19 +176,26 @@
 - int 값을 가지고 있는 이진 트리를 나타내는 Node라는 클래스를 정의하세요.
 - int value, Node left, right를 가지고 있어야 합니다.
 ```
-- 
+- 자료 구조  
+    - 자식 노드를 2개 이하로 가질 수 있는 tree 구조
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_tree.svg" width=60%>
+    - [이미지출처](https://en.wikipedia.org/wiki/Binary_tree)
+- [코드로 구현](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/Node.java)
 
-### BFS, DFS
+### Breadth-First Search, Depth-First Search
 ```diff
 - BinrayTree라는 클래스를 정의하고 주어진 노드를 기준으로 출력하는 bfs(Node node)와 dfs(Node node) 메소드를 구현하세요.
 - DFS는 왼쪽, 루트, 오른쪽 순으로 순회하세요.
 ```
-```java
-
-```
-```java
-
-```
+- 자료 구조
+    - BFS, 너비 우선 탐색
+        - 두 노드 사이의 최단 경로 탐색 시 사용 가능
+    - DFS, 깊이 우선 탐색
+        - 모든 노드를 방문 하고자 하는 경우 사용 가능
+        - 단순 검색 속도 자체는 BFS보다 느림
+    <img src="https://miro.medium.com/max/1088/1*INwehwNaWrUmOvq_a5wMWg.gif" width=60%>
+    - [이미지출처](https://medium.com/@tim_ng/bfs-and-dfs-52d3cb642a0e)
+- [코드로 구현](https://github.com/jjone36/self-study/blob/main/java_live_study/wk04/src/main/java/dataStructure/BinaryTree.java)
 
 <br>
 <hr>
@@ -195,3 +205,6 @@
 - [객체 지향의 사실과 오해](http://www.yes24.com/Product/Goods/18249021)
 - [스프링 입문을 위한 자바 객체 지향의 원리와 이해](https://wikibook.co.kr/java-oop-for-spring/)
 - [(stackoverflow) When should I use "this" in a class?](https://stackoverflow.com/questions/2411270/when-should-i-use-this-in-a-class)
+- [위키백과](https://en.wikipedia.org/wiki)
+- [깊이 우선 탐색(DFS)이란](https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html)
+- [너비 우선 탐색(BFS)이란](https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html)
