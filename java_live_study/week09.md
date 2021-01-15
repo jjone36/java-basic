@@ -69,7 +69,8 @@
 
 ## 자바가 제공하는 예외 계층 구조와 RuntimeException과 RE가 아닌 것의 차이
 - 모든 에외의 최고 상위 클래스는 Exception임 
-<img src="http://journals.ecs.soton.ac.uk/java/tutorial/java/exceptions/images/throwableHierarchy_trans.gif" width=70%>
+<img src="https://lh3.googleusercontent.com/proxy/ter87ZSnu1z3PvVsU7SQGViHOCwPBwIP5L6mlN_0rye-5dNosbVf31xd9bKW1ACKGkzUG3Ii80A3cfklwZrvWYRcfIwTh-agYhC5PFKX1w8K4tDY4doRCwT6cFQpGdYVex8Af5GeM_WjM5wNJeGpKMi8uBb4ERLYdA" width=50%>
+
 
 - [사진 출처](http://journals.ecs.soton.ac.uk/java/tutorial/java/exceptions/throwable.html)
     - Exception 클래스는 사용자의 실수와 같이 외적인 요인에 의해 발생할 수 있는 예외들
